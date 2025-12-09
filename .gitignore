@@ -2,3 +2,5 @@ node_modules/
 *.txt
 !README.md
 package-lock.json
+dist/
+!releases/

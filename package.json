@@ -1,16 +1,50 @@
 {
-  "name": "nwn-log-cleaner",
+  "name": "arelith-log-cleaner",
   "version": "1.0.0",
   "description": "Clean NWN Enhanced Edition log files by filtering out system messages, combat spam. Keeping only player dialogue and actions.",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "electron-builder --win --x64",
+    "build:all": "electron-builder --win --mac --linux"
   },
-  "keywords": ["nwn", "neverwinter nights", "log", "cleaner"],
+  "keywords": [
+    "nwn",
+    "neverwinter nights",
+    "log",
+    "cleaner",
+    "arelith"
+  ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "electron": "^39.2.6"
+    "electron": "^39.2.6",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.arelith.logcleaner",
+    "productName": "Arelith Log Cleaner",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "index.html",
+      "cleaner.js",
+      "package.json"
+    ],
+    "win": {
+      "target": "portable",
+      "icon": "icon.ico"
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "icon.png"
+    },
+    "linux": {
+      "target": "AppImage",
+      "icon": "icon.png",
+      "category": "Utility"
+    }
   }
 }
