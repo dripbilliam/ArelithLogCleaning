@@ -1,0 +1,16 @@
+{
+  "name": "nwn-log-cleaner",
+  "version": "1.0.0",
+  "description": "Clean NWN Enhanced Edition log files by filtering out system messages, combat spam. Keeping only player dialogue and actions.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["nwn", "neverwinter nights", "log", "cleaner"],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^39.2.6"
+  }
+}
